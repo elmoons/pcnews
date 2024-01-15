@@ -1,0 +1,170 @@
+body {
+    background: #2c2c2c;
+}
+
+aside {
+    float: left;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 100%;
+    min-height: 100%;
+    position: fixed;
+    color: #fff;
+    border-right: 5px solid #4d4d4d
+}
+
+
+aside .as {
+    float: left;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 200vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d
+}
+
+
+aside img {
+    width: 200px;
+    float: left;
+    margin-left: -25px;
+    border-radius: 16px;
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 15px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+}
+
+aside h3 {
+    margin-top: 5px;
+    font-size: 28px;
+}
+
+aside ul a{
+    text-decoration: none;
+}
+
+.hello-msg {
+    color: #FFF;
+    font-size: 18 px;
+    margin-right: 20px;
+    font-decoration: none;
+}
+
+aside ul {
+    list-style: none;
+    padding-left: 0!important;
+}
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+main {
+    margin-left: 390px;
+}
+
+main .features ul {
+    margin-top: 40px;
+    list-style-type: none;
+}
+
+main .features {
+    font-size: 20px;
+    float: left;
+    color: #fff;
+    margin-top: 30px;
+    text-align: center;
+    width: 75%;
+    display: grid;
+    justify-content: center;
+
+}
+
+main .features h1 {
+    font-size: 30px;
+}
+
+main .features h2 {
+    font-size: 25px;
+}
+
+main .features p {
+    max-width: 400px; margin: 20px auto
+}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    width: 400px;
+    margin: 10px 0px;
+    text-align: left;
+}
+
+form {
+    margin-left: 18%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+.edit-block {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-edit {
+    width: 150px;
+}
+
+aside span a {
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+    transition: transform .6s ease;
+    text-decoration: none;
+}
+
+aside span a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+.button {
+    font-weight: bold;
+    font-size: 10px;
+    display: block;
+    height: 50px;
+    width: 150px;
+    background: #eb5959;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #a22a2a;
+}
+
+a.button {
+    text-decoration: none;
+}

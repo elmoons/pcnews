@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			}
+
+		body {
+			font-family: 'Roboto', sans-serif;
+			background: #181818
+			}
+
+		input {
+			height: 45px;
+			width: 100%;
+			color: #385983;
+			font-size: 16px;
+			line-height: 16px;
+			border: 2px solid #E9F2FF;
+			border-radius: 5px;
+			padding-left: 25px;
+			}
+
+		main {
+			background: #181818;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			}
+
+
+
+		.register-form-container {
+			opacity: 0;
+			position: relative;
+			z-index: 1;
+			max-width: 415px;
+			width: 100%;
+			background: #2c2c2c;
+			box-shadow: #1e2939;
+			border-radius: 20px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-top: 38px;
+			padding-bottom: 38px;
+			animation-name: fadeForm;
+			animation-duration: .7s;
+			animation-timing-function: ease-in-out;
+			animation-delay: .5s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes fadeForm {
+			0% {
+				opacity: 0;
+			}
+
+			10% {
+				opacity: 0.1;
+			}
+
+			20% {
+				opacity: .2;
+			}
+
+			30% {
+				opacity: .3;
+			}
+
+			40% {
+				opacity: .4;
+			}
+
+			50% {
+				opacity: .5;
+			}
+
+			60% {
+				opacity: .6;
+			}
+
+			70% {
+				opacity: .7;
+			}
+
+			80% {
+				opacity: .8;
+			}
+
+			90% {
+				opacity: .9;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.form-title {
+			color: #fff;
+			font-weight: 500;
+			font-size: 25px;
+			line-height: 23px;
+			margin-bottom: 38px;
+		}
+
+		.form-field {
+			margin-bottom: 20px;
+		}
+
+		.button {
+			font-weight: bold;
+			font-size: 14px;
+			display: block;
+			height: 45px;
+			width: 355px;
+			background: #eb5959;
+			border-radius: 5px;
+			border: none;
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+			line-height: 45px;
+			cursor: pointer;
+		}
+
+		.button:hover {
+			background-color: #a22a2a;
+		}
+
+		a.button {
+			text-decoration: none;
+		}
+
+		.divider {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 14px;
+			color: #fff;
+			text-align: center;
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+
+		.divider a {
+			color: #eb5959;
+			text-decoration: none;
+
+		}
+
+		.reg {
+			padding-top: 10px;
+		}
+
+		.divider a:hover {
+			color: #a22a2a;
+			text-decoration: none;
+		}
+		.value {
+			margin-bottom: 10px;
+		}
+		#messages {
+			color: #fff;
+		}
+	</style>
+
+</head>
+<body>
+	<main>
+		<div class="register-form-container">
+			<h3 class="form-title">Вход</h3>
+			<div class="form-fields">
+				<form method="POST" action="">
+					{% csrf_token %}
+					<div class="form-field">
+						<input type="text" name="username" placeholder="Имя">
+					</div>
+					<div class="form-field">
+						<input type="password" name="password" placeholder="Пароль">
+					</div>
+					<button class="button" type="submit">Вход</button>
+				</form>
+			</div>
+
+
+			{% for message in messages %}
+				<p id="messages">{{message}}</p>
+			{% endfor %}
+
+			<div class="divider">
+					Еще нет аккаунта? <a href="{% url 'register' %}">Зарегестрироваться</a>
+			</div>
+		</div>
+
+	</main>
+</body>
+
+</html>
